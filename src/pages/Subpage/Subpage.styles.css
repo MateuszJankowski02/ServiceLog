@@ -1,0 +1,17 @@
+.subpage {
+  min-height: 60vh;
+}
+
+.subpage__card {
+  width: min(600px, 90%);
+  background: #1a1d27;
+  border-radius: 16px;
+  border: 1px solid #2a2d37;
+  padding: 48px 32px;
+  text-align: center;
+}
+
+.subpage__title {
+  font-size: 28px;
+  font-weight: 600;
+}

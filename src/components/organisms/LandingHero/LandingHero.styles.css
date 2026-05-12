@@ -1,0 +1,77 @@
+.landing-hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.landing-hero__intro {
+  text-align: center;
+}
+
+.landing-hero__title {
+  margin: 0;
+}
+
+.landing-hero__subtitle {
+  max-width: 620px;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.landing-hero__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.landing-hero__grid-item {
+  min-width: 0;
+}
+
+.landing-hero__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.landing-hero__button {
+  height: 49.6px;
+  min-width: 120px;
+  padding: 0 24px;
+  border-radius: 12px;
+}
+
+.landing-hero__button--primary {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.landing-hero__button--primary:hover {
+  background: #2f6fe0;
+}
+
+.landing-hero__button--ghost {
+  background: #1a1d27;
+  border: 1px solid #2a2d37;
+  color: #ffffff;
+}
+
+.landing-hero__button--ghost:hover {
+  background: #1a1d27;
+  border-color: #2a2d37;
+}
+
+@media (max-width: 960px) {
+  .landing-hero {
+    gap: 48px;
+  }
+
+  .landing-hero__grid {
+    grid-template-columns: 1fr;
+  }
+}
