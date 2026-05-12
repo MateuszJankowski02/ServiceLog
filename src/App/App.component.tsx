@@ -3,6 +3,7 @@ import type { ReactElement } from "react";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "../pages/LandingPage/LandingPage.component";
+import LoginRegisterPage from "../pages/LoginRegisterPage/LoginRegisterPage.component";
 import Subpage from "../pages/Subpage/Subpage.component";
 import UserProfile from "../pages/UserProfile/UserProfile.component";
 import MechanicProfile from "../pages/MechanicProfile/MechanicProfile.component";
@@ -68,13 +69,16 @@ const theme = createTheme({
 });
 
 export default function App(_props: AppProps) {
+  const subpages = navItems.filter((item) => item.to !== "/login-register");
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className="app-root">
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          {navItems.map((item) => (
+          <Route path="/login-register" element={<LoginRegisterPage />} />
+          {subpages.map((item) => (
             <Route
               key={item.to}
               path={item.to}
