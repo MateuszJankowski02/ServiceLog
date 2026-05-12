@@ -1,0 +1,49 @@
+.top-nav {
+  border-bottom: 1px solid #2a2d37;
+  background: transparent;
+}
+
+.top-nav__toolbar {
+  padding: 16px 32px 8px;
+  min-height: 48px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.top-nav__brand {
+  font-size: 16px;
+}
+
+.top-nav__links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.top-nav__link {
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #9ca3af;
+  border: 1px solid transparent;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.top-nav__link:hover {
+  color: #ffffff;
+}
+
+.top-nav__link--active {
+  background: #1a1d27;
+  border-color: #2a2d37;
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .top-nav__toolbar {
+    padding: 12px 20px;
+  }
+}

@@ -1,0 +1,17 @@
+.page-shell {
+  min-height: 100vh;
+  background: #0f1117;
+  color: #ffffff;
+}
+
+.page-shell__content {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 32px 0 48px;
+}
+
+@media (max-width: 1200px) {
+  .page-shell__content {
+    padding: 32px 24px 48px;
+  }
+}
