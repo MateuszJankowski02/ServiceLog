@@ -1,10 +1,18 @@
 import "./App.styles.css";
+import type { ReactElement } from "react";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "../pages/LandingPage/LandingPage.component";
 import Subpage from "../pages/Subpage/Subpage.component";
+import UserProfile from "../pages/UserProfile/UserProfile.component";
+import MechanicProfile from "../pages/MechanicProfile/MechanicProfile.component";
 import { navItems } from "../navigation";
 import type { AppProps } from "./App.types";
+
+const PAGES: Record<string, ReactElement> = {
+  "/user": <UserProfile />,
+  "/mechanic": <MechanicProfile />,
+};
 
 const theme = createTheme({
   palette: {
@@ -70,7 +78,7 @@ export default function App(_props: AppProps) {
             <Route
               key={item.to}
               path={item.to}
-              element={<Subpage title={item.label} />}
+              element={PAGES[item.to] ?? <Subpage title={item.label} />}
             />
           ))}
         </Routes>

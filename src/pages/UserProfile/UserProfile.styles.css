@@ -1,0 +1,119 @@
+.user-profile {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.user-profile__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.user-profile__grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.user-profile__card {
+  background: #1a1d27;
+  border: 1px solid #2a2d37;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.user-profile__identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 280px;
+  padding-top: 40px;
+}
+
+.user-profile__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #2a2d37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.user-profile__name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.user-profile__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.user-profile__section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.user-profile__field-label {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.user-profile__input .MuiOutlinedInput-root {
+  background: #0f1117;
+  border-radius: 10px;
+}
+
+.user-profile__input .MuiOutlinedInput-notchedOutline {
+  border-color: #2a2d37;
+}
+
+.user-profile__input .MuiOutlinedInput-input {
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.user-profile__checkbox {
+  margin-left: -6px;
+  color: #d1d5db;
+}
+
+.user-profile__checkbox .MuiTypography-root {
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+.user-profile__checkbox .MuiCheckbox-root {
+  color: #4b5563;
+  padding: 4px;
+  margin-right: 4px;
+}
+
+.user-profile__submit {
+  padding: 12px 24px;
+  font-size: 14px;
+  background: #3b82f6;
+}
+
+.user-profile__submit:hover {
+  background: #2563eb;
+}
+
+@media (max-width: 900px) {
+  .user-profile__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-profile__identity {
+    min-height: auto;
+  }
+}
