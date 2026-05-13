@@ -1,0 +1,151 @@
+.mechanic-profile {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.mechanic-profile__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.mechanic-profile__grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.mechanic-profile__card {
+  background: #1a1d27;
+  border: 1px solid #2a2d37;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.mechanic-profile__identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 420px;
+  padding-top: 56px;
+  gap: 8px;
+}
+
+.mechanic-profile__avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #2a2d37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.mechanic-profile__name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.mechanic-profile__verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #3b82f6;
+}
+
+.mechanic-profile__verified .MuiTypography-caption {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.mechanic-profile__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mechanic-profile__section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.mechanic-profile__field-label {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.mechanic-profile__input .MuiOutlinedInput-root {
+  background: #0f1117;
+  border-radius: 10px;
+}
+
+.mechanic-profile__input .MuiOutlinedInput-notchedOutline {
+  border-color: #2a2d37;
+}
+
+.mechanic-profile__input .MuiOutlinedInput-input {
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.mechanic-profile__input--mono .MuiOutlinedInput-input {
+  font-family: "Consolas", "JetBrains Mono", "Courier New", monospace;
+}
+
+.mechanic-profile__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mechanic-profile__chip {
+  background: #0f1117;
+  border: 1px solid #2a2d37;
+  color: #d1d5db;
+  font-size: 13px;
+  height: 28px;
+  border-radius: 8px;
+}
+
+.mechanic-profile__chip-add {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #0f1117;
+  border: 1px dashed #3b82f6;
+  color: #3b82f6;
+  padding: 0;
+}
+
+.mechanic-profile__chip-add:hover {
+  background: rgba(59, 130, 246, 0.08);
+  border-style: solid;
+}
+
+.mechanic-profile__submit {
+  padding: 12px 24px;
+  font-size: 14px;
+  background: #3b82f6;
+  margin-top: 8px;
+}
+
+.mechanic-profile__submit:hover {
+  background: #2563eb;
+}
+
+@media (max-width: 900px) {
+  .mechanic-profile__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mechanic-profile__identity {
+    min-height: auto;
+  }
+}
