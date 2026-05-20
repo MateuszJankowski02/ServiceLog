@@ -223,8 +223,10 @@ export default function CreateServiceOrder(_props: CreateServiceOrderProps) {
                     onChange={(e) => setDate(e.target.value)}
                     variant="outlined"
                     fullWidth
-                    InputProps={{
-                      className: "create-order__input create-order__date",
+                    slotProps={{
+                      input: {
+                        className: "create-order__input create-order__date",
+                      },
                     }}
                   />
                   <Box className="create-order__date-icon" aria-hidden="true">
@@ -246,7 +248,9 @@ export default function CreateServiceOrder(_props: CreateServiceOrderProps) {
                   onChange={(e) => setProblem(e.target.value)}
                   variant="outlined"
                   fullWidth
-                  InputProps={{ className: "create-order__textarea" }}
+                  slotProps={{
+                    input: { className: "create-order__textarea" },
+                  }}
                 />
               </Box>
             </>

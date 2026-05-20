@@ -119,7 +119,7 @@ export default function WorkReport(_props: WorkReportProps) {
               onChange={(e) => setMileage(e.target.value)}
               variant="outlined"
               fullWidth
-              InputProps={{ className: "work-report__input" }}
+              slotProps={{ input: { className: "work-report__input" } }}
             />
           </Box>
 
@@ -137,7 +137,7 @@ export default function WorkReport(_props: WorkReportProps) {
                 onKeyDown={handlePartKeyDown}
                 variant="outlined"
                 fullWidth
-                InputProps={{ className: "work-report__input" }}
+                slotProps={{ input: { className: "work-report__input" } }}
               />
               <Button
                 disableElevation
@@ -179,7 +179,7 @@ export default function WorkReport(_props: WorkReportProps) {
               onChange={(e) => setWorkDescription(e.target.value)}
               variant="outlined"
               fullWidth
-              InputProps={{ className: "work-report__textarea" }}
+              slotProps={{ input: { className: "work-report__textarea" } }}
             />
           </Box>
 
@@ -194,7 +194,7 @@ export default function WorkReport(_props: WorkReportProps) {
               onChange={(e) => setCost(e.target.value)}
               variant="outlined"
               fullWidth
-              InputProps={{ className: "work-report__input" }}
+              slotProps={{ input: { className: "work-report__input" } }}
             />
           </Box>
 

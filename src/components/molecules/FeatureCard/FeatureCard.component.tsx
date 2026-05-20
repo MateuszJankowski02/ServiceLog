@@ -1,4 +1,4 @@
-import { Box, Paper, Stack, Typography } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import type { FeatureCardProps } from "./FeatureCard.types";
 import "./FeatureCard.styles.css";
 
@@ -9,7 +9,14 @@ export default function FeatureCard({
 }: FeatureCardProps) {
   return (
     <Paper elevation={0} className="feature-card">
-      <Stack spacing={2} alignItems="center" className="feature-card__content">
+      <Box
+        className="feature-card__content"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 2,
+        }}>
         <Box className="feature-card__icon">
           <Box
             component="img"
@@ -24,7 +31,7 @@ export default function FeatureCard({
         <Typography variant="body2" className="feature-card__description">
           {description}
         </Typography>
-      </Stack>
+      </Box>
     </Paper>
   );
 }

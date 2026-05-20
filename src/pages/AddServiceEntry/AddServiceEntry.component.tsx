@@ -94,8 +94,10 @@ export default function AddServiceEntry(_props: AddServiceEntryProps) {
                   onChange={(e) => setDate(e.target.value)}
                   variant="outlined"
                   fullWidth
-                  InputProps={{
-                    className: "add-entry__input add-entry__date",
+                  slotProps={{
+                    input: {
+                      className: "add-entry__input add-entry__date",
+                    },
                   }}
                 />
                 <Box className="add-entry__date-icon" aria-hidden="true">
@@ -114,7 +116,7 @@ export default function AddServiceEntry(_props: AddServiceEntryProps) {
                 onChange={(e) => setMileage(e.target.value)}
                 variant="outlined"
                 fullWidth
-                InputProps={{ className: "add-entry__input" }}
+                slotProps={{ input: { className: "add-entry__input" } }}
               />
             </Box>
           </Box>
@@ -150,7 +152,7 @@ export default function AddServiceEntry(_props: AddServiceEntryProps) {
               onChange={(e) => setServiceName(e.target.value)}
               variant="outlined"
               fullWidth
-              InputProps={{ className: "add-entry__input" }}
+              slotProps={{ input: { className: "add-entry__input" } }}
             />
           </Box>
 
@@ -166,7 +168,7 @@ export default function AddServiceEntry(_props: AddServiceEntryProps) {
               onChange={(e) => setDescription(e.target.value)}
               variant="outlined"
               fullWidth
-              InputProps={{ className: "add-entry__textarea" }}
+              slotProps={{ input: { className: "add-entry__textarea" } }}
             />
           </Box>
 
@@ -181,7 +183,7 @@ export default function AddServiceEntry(_props: AddServiceEntryProps) {
               onChange={(e) => setCost(e.target.value)}
               variant="outlined"
               fullWidth
-              InputProps={{ className: "add-entry__input" }}
+              slotProps={{ input: { className: "add-entry__input" } }}
             />
           </Box>
 

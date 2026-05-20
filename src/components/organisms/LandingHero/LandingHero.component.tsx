@@ -1,4 +1,4 @@
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import FeatureCard from "../../molecules/FeatureCard/FeatureCard.component";
 import type { LandingHeroProps } from "./LandingHero.types";
 import "./LandingHero.styles.css";
@@ -6,7 +6,14 @@ import "./LandingHero.styles.css";
 export default function LandingHero({ features }: LandingHeroProps) {
   return (
     <Box className="landing-hero">
-      <Stack spacing={2} alignItems="center" className="landing-hero__intro">
+      <Box
+        className="landing-hero__intro"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 2,
+        }}>
         <Typography variant="h1" className="landing-hero__title">
           ServiceLog
         </Typography>
@@ -17,7 +24,7 @@ export default function LandingHero({ features }: LandingHeroProps) {
           Complete vehicle service history tracking and mechanic booking
           platform
         </Typography>
-      </Stack>
+      </Box>
 
       <Box className="landing-hero__grid">
         {features.map((feature) => (

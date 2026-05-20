@@ -1,7 +1,8 @@
-import { Paper, Stack, Typography } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import PageShell from "../../components/templates/PageShell/PageShell.component";
-import { navItems } from "../../navigation";
+import { guestNavItems } from "../../navigation";
 import type { LoginRegisterPageProps } from "./LoginRegisterPage.types";
 import "./LoginRegisterPage.styles.css";
 
@@ -9,16 +10,28 @@ type AuthMode = "login" | "register";
 type UserRole = "owner" | "mechanic";
 
 export default function LoginRegisterPage(_props: LoginRegisterPageProps) {
+  const navigate = useNavigate();
   const [mode, setMode] = useState<AuthMode>("login");
   const [role, setRole] = useState<UserRole>("owner");
   const isRegister = mode === "register";
 
+  const handleSubmit = () => {
+    if (isRegister) {
+      navigate(role === "mechanic" ? "/incoming-orders" : "/my-vehicles");
+    } else {
+      navigate("/my-vehicles");
+    }
+  };
+
   return (
-    <PageShell navItems={navItems}>
-      <Stack
+    <PageShell navItems={guestNavItems}>
+      <Box
         className="login-register-page"
-        alignItems="center"
-        justifyContent="center">
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}>
         <Paper elevation={0} className="login-register-page__card">
           <Typography component="h1" className="login-register-page__title">
             ServiceLog
@@ -121,12 +134,15 @@ export default function LoginRegisterPage(_props: LoginRegisterPageProps) {
                 placeholder="********"
               />
             </div>
-            <button type="button" className="login-register-page__submit">
+            <button
+              type="button"
+              className="login-register-page__submit"
+              onClick={handleSubmit}>
               {isRegister ? "Sign Up" : "Log In"}
             </button>
           </div>
         </Paper>
-      </Stack>
+      </Box>
     </PageShell>
   );
 }
