@@ -1,0 +1,94 @@
+.vehicle-card {
+  background: #1a1d27;
+  border: 1px solid #2a2d37;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.vehicle-card__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #0f1117;
+  border: 1px solid #2a2d37;
+  display: grid;
+  place-items: center;
+  color: #3b82f6;
+}
+
+.vehicle-card__name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.vehicle-card__year {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.vehicle-card__mileage {
+  background: #0f1117;
+  border: 1px solid #2a2d37;
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.vehicle-card__mileage-label {
+  font-size: 11px;
+  color: #9ca3af;
+  letter-spacing: 0.4px;
+  text-transform: none;
+}
+
+.vehicle-card__mileage-value {
+  font-family: "Consolas", "JetBrains Mono", "Courier New", monospace;
+  font-size: 24px;
+  font-weight: 500;
+  color: #3b82f6;
+  letter-spacing: 0.4px;
+}
+
+.vehicle-card__last-service {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.vehicle-card__alert {
+  align-self: flex-start;
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.vehicle-card__history-btn.MuiButton-root {
+  margin-top: auto;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 10px;
+  background: #0f1117;
+  border: 1px solid #2a2d37;
+  color: #d1d5db;
+  text-transform: none;
+  justify-content: space-between;
+}
+
+.vehicle-card__history-btn.MuiButton-root:hover {
+  background: #20232d;
+  color: #ffffff;
+  border-color: #3a3f4d;
+}

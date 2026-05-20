@@ -1,0 +1,24 @@
+.incoming-orders {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.incoming-orders__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.incoming-orders__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 720px) {
+  .incoming-orders__grid {
+    grid-template-columns: 1fr;
+  }
+}

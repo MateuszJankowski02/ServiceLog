@@ -1,0 +1,69 @@
+.my-vehicles {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.my-vehicles__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.my-vehicles__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.my-vehicles__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.my-vehicles__action.MuiButton-root {
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+.my-vehicles__action--ghost.MuiButton-root {
+  background: #1a1d27;
+  border: 1px solid #2a2d37;
+  color: #ffffff;
+}
+
+.my-vehicles__action--ghost.MuiButton-root:hover {
+  background: #20232d;
+}
+
+.my-vehicles__action--primary.MuiButton-root {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.my-vehicles__action--primary.MuiButton-root:hover {
+  background: #2f6fe0;
+}
+
+.my-vehicles__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 960px) {
+  .my-vehicles__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .my-vehicles__grid {
+    grid-template-columns: 1fr;
+  }
+}
