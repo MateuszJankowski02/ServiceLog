@@ -3,6 +3,7 @@ import type { ReactElement } from "react";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "../pages/LandingPage/LandingPage.component";
+import LoginRegisterPage from "../pages/LoginRegisterPage/LoginRegisterPage.component";
 import Subpage from "../pages/Subpage/Subpage.component";
 import UserProfile from "../pages/UserProfile/UserProfile.component";
 import MechanicProfile from "../pages/MechanicProfile/MechanicProfile.component";
@@ -88,13 +89,16 @@ export default function App(_props: AppProps) {
       <div className="app-root">
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          {allRoutes.map((item) => (
-            <Route
-              key={item.to}
-              path={item.to}
-              element={PAGES[item.to] ?? <Subpage title={item.label} />}
-            />
-          ))}
+          <Route path="/login-register" element={<LoginRegisterPage />} />
+          {allRoutes
+            .filter((item) => item.to !== "/login-register")
+            .map((item) => (
+              <Route
+                key={item.to}
+                path={item.to}
+                element={PAGES[item.to] ?? <Subpage title={item.label} />}
+              />
+            ))}
         </Routes>
       </div>
     </ThemeProvider>

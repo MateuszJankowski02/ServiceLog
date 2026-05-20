@@ -1,0 +1,133 @@
+.login-register-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0 48px;
+}
+
+.login-register-page__card {
+  width: min(448px, 92vw);
+  padding: 32px;
+  background: #1a1d27;
+  border-radius: 16px;
+  border: 1px solid #2a2d37;
+}
+
+.login-register-page__title {
+  font-family: "Consolas", "JetBrains Mono", "Courier New", monospace;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+.login-register-page__tabs {
+  display: flex;
+  gap: 8px;
+  background: #0f1117;
+  padding: 4px;
+  border-radius: 12px;
+}
+
+.login-register-page__tab {
+  flex: 1;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #9ca3af;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-register-page__tab--active {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.login-register-page__form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-register-page__group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-register-page__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.login-register-page__input {
+  height: 46px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid #2a2d37;
+  background: #0f1117;
+  color: #ffffff;
+  font-size: 16px;
+  outline: none;
+}
+
+.login-register-page__input::placeholder {
+  color: #6b7280;
+}
+
+.login-register-page__role {
+  display: flex;
+  gap: 8px;
+}
+
+.login-register-page__role-button {
+  flex: 1;
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid #2a2d37;
+  background: transparent;
+  color: #9ca3af;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-register-page__role-button--active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #ffffff;
+}
+
+.login-register-page__submit {
+  margin-top: 8px;
+  height: 44px;
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  background: #3b82f6;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-register-page__tab:focus-visible,
+.login-register-page__role-button:focus-visible,
+.login-register-page__submit:focus-visible,
+.login-register-page__input:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .login-register-page__card {
+    padding: 24px;
+  }
+}
