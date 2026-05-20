@@ -9,7 +9,8 @@ import {
   Typography,
 } from "@mui/material";
 import PageShell from "../../components/templates/PageShell/PageShell.component";
-import { navItems } from "../../navigation";
+import RoleSwitcher from "../../components/molecules/RoleSwitcher/RoleSwitcher.component";
+import { loggedNavItems } from "../../navigation";
 import type { MechanicProfileProps } from "./MechanicProfile.types";
 import "./MechanicProfile.styles.css";
 
@@ -64,8 +65,9 @@ const VerifiedIcon = () => (
 
 export default function MechanicProfile(_props: MechanicProfileProps) {
   return (
-    <PageShell navItems={navItems}>
+    <PageShell navItems={loggedNavItems}>
       <Box className="mechanic-profile">
+        <RoleSwitcher />
         <Typography variant="h2" className="mechanic-profile__title">
           Profile
         </Typography>

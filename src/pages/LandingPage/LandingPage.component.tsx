@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import LandingHero from "../../components/organisms/LandingHero/LandingHero.component";
 import PageShell from "../../components/templates/PageShell/PageShell.component";
-import { navItems } from "../../navigation";
+import { guestNavItems } from "../../navigation";
 import type { LandingPageProps } from "./LandingPage.types";
 import "./LandingPage.styles.css";
 
@@ -25,7 +25,7 @@ const features = [
 
 export default function LandingPage(_props: LandingPageProps) {
   return (
-    <PageShell navItems={navItems}>
+    <PageShell navItems={guestNavItems}>
       <Box className="landing-page">
         <LandingHero features={features} />
       </Box>

@@ -9,7 +9,8 @@ import {
   Typography,
 } from "@mui/material";
 import PageShell from "../../components/templates/PageShell/PageShell.component";
-import { navItems } from "../../navigation";
+import RoleSwitcher from "../../components/molecules/RoleSwitcher/RoleSwitcher.component";
+import { loggedNavItems } from "../../navigation";
 import type { UserProfileProps } from "./UserProfile.types";
 import "./UserProfile.styles.css";
 
@@ -31,8 +32,9 @@ const AvatarIcon = () => (
 
 export default function UserProfile(_props: UserProfileProps) {
   return (
-    <PageShell navItems={navItems}>
+    <PageShell navItems={loggedNavItems}>
       <Box className="user-profile">
+        <RoleSwitcher />
         <Typography variant="h2" className="user-profile__title">
           Profile
         </Typography>

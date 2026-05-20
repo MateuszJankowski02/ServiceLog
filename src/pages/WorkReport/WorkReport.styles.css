@@ -1,0 +1,240 @@
+.work-report {
+  width: 100%;
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.work-report__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.work-report__vehicle {
+  background: #0f1117;
+  border: 1px solid #2a2d37;
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.work-report__vehicle-label {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.work-report__vehicle-vin {
+  font-family: "Consolas", "JetBrains Mono", "Courier New", monospace;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.work-report__vehicle-name {
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+.work-report__form {
+  background: #1a1d27;
+  border: 1px solid #2a2d37;
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.work-report__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.work-report__label {
+  font-size: 13px;
+  color: #d1d5db;
+}
+
+.work-report__label-required::after {
+  content: " *";
+  color: #f87171;
+}
+
+.work-report__input.MuiOutlinedInput-root {
+  background: #0f1117;
+  border-radius: 10px;
+}
+
+.work-report__input .MuiOutlinedInput-notchedOutline {
+  border-color: #2a2d37;
+}
+
+.work-report__input .MuiOutlinedInput-input {
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.work-report__textarea.MuiOutlinedInput-root {
+  background: #0f1117;
+  border-radius: 10px;
+  align-items: flex-start;
+}
+
+.work-report__textarea .MuiOutlinedInput-notchedOutline {
+  border-color: #2a2d37;
+}
+
+.work-report__textarea .MuiOutlinedInput-input {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.work-report__parts-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.work-report__add-part-btn.MuiButton-root {
+  background: #3b82f6;
+  color: #ffffff;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.work-report__add-part-btn.MuiButton-root:hover {
+  background: #2f6fe0;
+}
+
+.work-report__add-part-btn.MuiButton-root.Mui-disabled {
+  background: rgba(59, 130, 246, 0.4);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.work-report__parts-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.work-report__part-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #0f1117;
+  border: 1px solid #2a2d37;
+  border-radius: 8px;
+  padding: 4px 8px 4px 12px;
+  font-size: 13px;
+  color: #d1d5db;
+}
+
+.work-report__part-remove.MuiIconButton-root {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  color: #9ca3af;
+}
+
+.work-report__part-remove.MuiIconButton-root:hover {
+  color: #f87171;
+}
+
+.work-report__banner {
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.work-report__dropzone {
+  background: #0f1117;
+  border: 1.5px dashed #2a2d37;
+  border-radius: 12px;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color 120ms ease,
+    background 120ms ease;
+}
+
+.work-report__dropzone:hover {
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.04);
+}
+
+.work-report__dropzone-icon {
+  color: #9ca3af;
+}
+
+.work-report__dropzone-primary {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.work-report__dropzone-secondary {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.work-report__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.work-report__btn.MuiButton-root {
+  padding: 10px 24px;
+  font-size: 14px;
+  border-radius: 10px;
+  min-width: 140px;
+}
+
+.work-report__btn--ghost.MuiButton-root {
+  background: #1a1d27;
+  border: 1px solid #2a2d37;
+  color: #ffffff;
+}
+
+.work-report__btn--ghost.MuiButton-root:hover {
+  background: #20232d;
+}
+
+.work-report__btn--primary.MuiButton-root {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.work-report__btn--primary.MuiButton-root:hover {
+  background: #2f6fe0;
+}
+
+@media (max-width: 640px) {
+  .work-report__actions {
+    flex-direction: column-reverse;
+  }
+
+  .work-report__btn.MuiButton-root {
+    width: 100%;
+  }
+}

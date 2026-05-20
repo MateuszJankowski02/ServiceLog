@@ -1,0 +1,235 @@
+.my-orders {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.my-orders__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.my-orders__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.my-orders__new-btn.MuiButton-root {
+  background: #3b82f6;
+  color: #ffffff;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-transform: none;
+}
+
+.my-orders__new-btn.MuiButton-root:hover {
+  background: #2f6fe0;
+}
+
+.my-orders__tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.my-orders__tab.MuiButton-root {
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  background: #1a1d27;
+  border: 1px solid #2a2d37;
+  color: #d1d5db;
+  text-transform: none;
+}
+
+.my-orders__tab.MuiButton-root:hover {
+  background: #20232d;
+}
+
+.my-orders__tab--active.MuiButton-root {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #ffffff;
+}
+
+.my-orders__tab--active.MuiButton-root:hover {
+  background: #2f6fe0;
+}
+
+.my-orders__table {
+  background: #1a1d27;
+  border: 1px solid #2a2d37;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.my-orders__row {
+  display: grid;
+  grid-template-columns: 1.4fr 1.4fr 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 16px 20px;
+  align-items: center;
+}
+
+.my-orders__row--header {
+  background: #20232d;
+  font-size: 13px;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: none;
+}
+
+.my-orders__row--data {
+  font-size: 14px;
+  color: #ffffff;
+  border-top: 1px solid #2a2d37;
+}
+
+.my-orders__row--data:first-of-type {
+  border-top: none;
+}
+
+.my-orders__status-chip {
+  display: inline-flex;
+  align-self: start;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.my-orders__status-chip--completed {
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.my-orders__status-chip--active {
+  background: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.my-orders__toggle.MuiButton-root {
+  justify-self: end;
+  color: #3b82f6;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: none;
+  padding: 4px 8px;
+  min-width: 0;
+}
+
+.my-orders__toggle.MuiButton-root:hover {
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.my-orders__report {
+  padding: 20px 24px 24px;
+  border-top: 1px solid #2a2d37;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  grid-template-areas:
+    "mileage work"
+    "cost    work"
+    "parts   work";
+  gap: 16px 32px;
+}
+
+.my-orders__report-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.my-orders__report-field--mileage {
+  grid-area: mileage;
+}
+
+.my-orders__report-field--cost {
+  grid-area: cost;
+}
+
+.my-orders__report-field--parts {
+  grid-area: parts;
+}
+
+.my-orders__report-field--work {
+  grid-area: work;
+}
+
+.my-orders__report-label {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.my-orders__report-value {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.my-orders__report-value--mono {
+  font-family: "Consolas", "JetBrains Mono", "Courier New", monospace;
+  letter-spacing: 0.4px;
+}
+
+.my-orders__report-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.my-orders__report-chip {
+  background: #0f1117;
+  border: 1px solid #2a2d37;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 12px;
+  color: #d1d5db;
+}
+
+.my-orders__empty {
+  padding: 40px 24px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .my-orders__row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .my-orders__row--header {
+    display: none;
+  }
+
+  .my-orders__row--data {
+    grid-template-areas:
+      "vehicle vehicle"
+      "mechanic mechanic"
+      "date status"
+      "actions actions";
+    gap: 8px;
+  }
+
+  .my-orders__toggle.MuiButton-root {
+    justify-self: start;
+  }
+
+  .my-orders__report {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "mileage"
+      "cost"
+      "parts"
+      "work";
+  }
+}

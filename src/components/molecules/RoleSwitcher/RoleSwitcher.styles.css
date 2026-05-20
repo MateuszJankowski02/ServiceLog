@@ -1,0 +1,49 @@
+.role-switcher {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: #1a1d27;
+  border: 1px dashed #2a2d37;
+  border-radius: 10px;
+  padding: 8px 12px 8px 16px;
+  width: fit-content;
+}
+
+.role-switcher__hint {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.role-switcher__buttons {
+  display: flex;
+  gap: 4px;
+  background: #0f1117;
+  border: 1px solid #2a2d37;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.role-switcher__btn.MuiButton-root {
+  padding: 4px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  text-transform: none;
+  color: #9ca3af;
+  background: transparent;
+  min-width: 0;
+}
+
+.role-switcher__btn.MuiButton-root:hover {
+  color: #ffffff;
+}
+
+.role-switcher__btn--active.MuiButton-root {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.role-switcher__btn--active.MuiButton-root:hover {
+  background: #2f6fe0;
+}

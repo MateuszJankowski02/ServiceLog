@@ -7,12 +7,26 @@ import LoginRegisterPage from "../pages/LoginRegisterPage/LoginRegisterPage.comp
 import Subpage from "../pages/Subpage/Subpage.component";
 import UserProfile from "../pages/UserProfile/UserProfile.component";
 import MechanicProfile from "../pages/MechanicProfile/MechanicProfile.component";
-import { navItems } from "../navigation";
+import MyVehicles from "../pages/MyVehicles/MyVehicles.component";
+import MyOrders from "../pages/MyOrders/MyOrders.component";
+import IncomingOrders from "../pages/IncomingOrders/IncomingOrders.component";
+import CreateServiceOrder from "../pages/CreateServiceOrder/CreateServiceOrder.component";
+import AddServiceEntry from "../pages/AddServiceEntry/AddServiceEntry.component";
+import VehicleHistory from "../pages/VehicleHistory/VehicleHistory.component";
+import WorkReport from "../pages/WorkReport/WorkReport.component";
+import { allRoutes } from "../navigation";
 import type { AppProps } from "./App.types";
 
 const PAGES: Record<string, ReactElement> = {
   "/user": <UserProfile />,
   "/mechanic": <MechanicProfile />,
+  "/my-vehicles": <MyVehicles />,
+  "/my-orders": <MyOrders />,
+  "/incoming-orders": <IncomingOrders />,
+  "/create-service-order": <CreateServiceOrder />,
+  "/add-service-entry": <AddServiceEntry />,
+  "/vehicle-history": <VehicleHistory />,
+  "/work-report": <WorkReport />,
 };
 
 const theme = createTheme({
@@ -69,8 +83,6 @@ const theme = createTheme({
 });
 
 export default function App(_props: AppProps) {
-  const subpages = navItems.filter((item) => item.to !== "/login-register");
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -78,13 +90,15 @@ export default function App(_props: AppProps) {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login-register" element={<LoginRegisterPage />} />
-          {subpages.map((item) => (
-            <Route
-              key={item.to}
-              path={item.to}
-              element={PAGES[item.to] ?? <Subpage title={item.label} />}
-            />
-          ))}
+          {allRoutes
+            .filter((item) => item.to !== "/login-register")
+            .map((item) => (
+              <Route
+                key={item.to}
+                path={item.to}
+                element={PAGES[item.to] ?? <Subpage title={item.label} />}
+              />
+            ))}
         </Routes>
       </div>
     </ThemeProvider>

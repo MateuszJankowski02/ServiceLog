@@ -1,0 +1,189 @@
+.add-entry {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.add-entry__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.add-entry__form {
+  background: #1a1d27;
+  border: 1px solid #2a2d37;
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.add-entry__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.add-entry__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.add-entry__label {
+  font-size: 13px;
+  color: #d1d5db;
+}
+
+.add-entry__input.MuiOutlinedInput-root,
+.add-entry__select.MuiOutlinedInput-root {
+  background: #0f1117;
+  border-radius: 10px;
+}
+
+.add-entry__input .MuiOutlinedInput-notchedOutline,
+.add-entry__select .MuiOutlinedInput-notchedOutline {
+  border-color: #2a2d37;
+}
+
+.add-entry__input .MuiOutlinedInput-input,
+.add-entry__select .MuiSelect-select {
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.add-entry__textarea.MuiOutlinedInput-root {
+  background: #0f1117;
+  border-radius: 10px;
+  align-items: flex-start;
+}
+
+.add-entry__textarea .MuiOutlinedInput-notchedOutline {
+  border-color: #2a2d37;
+}
+
+.add-entry__textarea .MuiOutlinedInput-input {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.add-entry__date-wrapper {
+  position: relative;
+}
+
+.add-entry__date input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 44px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.add-entry__date-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+}
+
+.add-entry__date-wrapper:hover .add-entry__date-icon {
+  color: #ffffff;
+}
+
+.add-entry__dropzone {
+  background: #0f1117;
+  border: 1.5px dashed #2a2d37;
+  border-radius: 12px;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color 120ms ease,
+    background 120ms ease;
+}
+
+.add-entry__dropzone:hover {
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.04);
+}
+
+.add-entry__dropzone-icon {
+  color: #9ca3af;
+}
+
+.add-entry__dropzone-primary {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.add-entry__dropzone-secondary {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.add-entry__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.add-entry__btn.MuiButton-root {
+  padding: 10px 24px;
+  font-size: 14px;
+  border-radius: 10px;
+  min-width: 130px;
+}
+
+.add-entry__btn--ghost.MuiButton-root {
+  background: #1a1d27;
+  border: 1px solid #2a2d37;
+  color: #ffffff;
+}
+
+.add-entry__btn--ghost.MuiButton-root:hover {
+  background: #20232d;
+}
+
+.add-entry__btn--primary.MuiButton-root {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.add-entry__btn--primary.MuiButton-root:hover {
+  background: #2f6fe0;
+}
+
+@media (max-width: 640px) {
+  .add-entry__row {
+    grid-template-columns: 1fr;
+  }
+
+  .add-entry__actions {
+    flex-direction: column-reverse;
+  }
+
+  .add-entry__btn.MuiButton-root {
+    width: 100%;
+  }
+}
