@@ -1,5 +1,7 @@
+import type { ReactNode } from "react";
+
 export type FeatureCardProps = {
-  icon: string;
+  icon: ReactNode;
   title: string;
   description: string;
 };

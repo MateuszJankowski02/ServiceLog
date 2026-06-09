@@ -61,6 +61,56 @@
   gap: 8px;
 }
 
+.login-register-page__google {
+  height: 44px;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #4285f4;
+  background: #4285f4;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.login-register-page__google:hover {
+  background: #3367d6;
+  border-color: #3367d6;
+}
+
+.login-register-page__google-icon {
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.login-register-page__google:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.login-register-page__divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.login-register-page__divider::before,
+.login-register-page__divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: #2a2d37;
+}
+
 .login-register-page__label {
   font-size: 14px;
   font-weight: 500;
@@ -118,8 +168,21 @@
   cursor: pointer;
 }
 
+.login-register-page__submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.login-register-page__error {
+  margin: 0;
+  color: #f87171;
+  font-size: 14px;
+  line-height: 20px;
+}
+
 .login-register-page__tab:focus-visible,
 .login-register-page__role-button:focus-visible,
+.login-register-page__google:focus-visible,
 .login-register-page__submit:focus-visible,
 .login-register-page__input:focus-visible {
   outline: 2px solid #3b82f6;

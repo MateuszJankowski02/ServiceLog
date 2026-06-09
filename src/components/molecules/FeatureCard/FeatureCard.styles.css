@@ -26,6 +26,14 @@
 .feature-card__icon-image {
   width: 24px;
   height: 24px;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+}
+
+.feature-card__icon-image svg {
+  width: 100%;
+  height: 100%;
 }
 
 .feature-card__title {

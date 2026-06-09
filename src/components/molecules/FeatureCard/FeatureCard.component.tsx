@@ -18,12 +18,9 @@ export default function FeatureCard({
           gap: 2,
         }}>
         <Box className="feature-card__icon">
-          <Box
-            component="img"
-            src={icon}
-            alt=""
-            className="feature-card__icon-image"
-          />
+          <Box className="feature-card__icon-image" aria-hidden="true">
+            {icon}
+          </Box>
         </Box>
         <Typography variant="h6" className="feature-card__title">
           {title}

@@ -1,4 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 import FeatureCard from "../../molecules/FeatureCard/FeatureCard.component";
 import type { LandingHeroProps } from "./LandingHero.types";
 import "./LandingHero.styles.css";
@@ -36,12 +37,16 @@ export default function LandingHero({ features }: LandingHeroProps) {
 
       <Box className="landing-hero__actions">
         <Button
+          component={RouterLink}
+          to="/login-register?mode=register"
           variant="contained"
           className="landing-hero__button landing-hero__button--primary"
           disableElevation>
           Sign Up
         </Button>
         <Button
+          component={RouterLink}
+          to="/login-register?mode=login"
           variant="outlined"
           className="landing-hero__button landing-hero__button--ghost"
           disableElevation>
