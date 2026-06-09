@@ -6,12 +6,118 @@
   flex-direction: column;
 }
 
+.page-shell--app {
+  flex-direction: row;
+}
+
+.page-shell__sidebar {
+  width: 220px;
+  min-height: 100vh;
+  border-right: 1px solid #2a2d37;
+  background: #0f1117;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.page-shell__brand {
+  height: 84px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  font-family: "Consolas", "JetBrains Mono", "Courier New", monospace;
+  font-size: 24px;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+.page-shell__sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 12px 12px;
+}
+
+.page-shell__sidebar-link.MuiButton-root {
+  height: 44px;
+  border-radius: 8px;
+  padding: 0 12px;
+  justify-content: flex-start;
+  color: #d1d5db;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: none;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.page-shell__sidebar-link.MuiButton-root:hover {
+  background: #1a1d27;
+  color: #ffffff;
+}
+
+.page-shell__sidebar-link.active.MuiButton-root:not(.page-shell__sidebar-link--logout) {
+  background: #1a1d27;
+  border-color: #2a2d37;
+  color: #ffffff;
+}
+
+.page-shell__sidebar-link--logout.MuiButton-root {
+  margin-top: auto;
+  color: #f87171;
+}
+
+.page-shell__sidebar-link--logout.MuiButton-root:hover {
+  background: rgba(248, 113, 113, 0.08);
+  color: #f87171;
+}
+
+.page-shell__app-content {
+  flex: 1;
+  min-width: 0;
+  padding: 32px;
+}
+
 .page-shell__content {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 32px 32px 48px;
   flex: 1;
+}
+
+@media (max-width: 900px) {
+  .page-shell--app {
+    flex-direction: column;
+  }
+
+  .page-shell__sidebar {
+    width: 100%;
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid #2a2d37;
+  }
+
+  .page-shell__brand {
+    height: auto;
+    padding: 16px 24px 8px;
+  }
+
+  .page-shell__sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 8px 16px 16px;
+  }
+
+  .page-shell__sidebar-link--logout.MuiButton-root {
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  .page-shell__app-content {
+    padding: 24px 16px 40px;
+  }
 }
 
 @media (max-width: 720px) {
